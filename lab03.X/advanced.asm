@@ -1,0 +1,51 @@
+#INCLUDE <p18f4520.inc>
+    CONFIG OSC = INTIO67
+    CONFIG WDT = OFF 
+    org 0x00    ;PC = 0x10 
+    ;SUBWF 0x01 means the value in 0x01 - the value in WREG and store it into 0x01 
+    ; ex [0x01]0x06 [WREG] 0x01 after doing subwf [0x01]0x05  [WREG] 0x01
+    MOVLW 0x9A
+    MOVWF 0x00
+    MOVLW 0xBC
+    MOVWF 0x01
+    MOVLW 0x12
+    MOVWF 0x10 
+    MOVLW 0x34
+    MOVWF 0x11
+    start:
+	MOVF 0x11, W ; file register [0x11]46 > WREG 0x58
+	CPFSLT 0x01 ; if 0x11> WREG skip next line
+	GOTO substract
+	GOTO borrow
+	
+    substract:
+	MOVF 0x00 ,W
+	MOVWF 0x20
+	MOVF 0x10 , W
+	SUBWF 0x20
+	MOVF 0x01,W 
+	MOVWF 0x21
+	MOVF 0x11, W
+	SUBWF 0x21
+	GOTO final_program
+	
+    borrow: 
+	DECF 0x00
+	MOVLW 0xFF 
+	MOVWF 0x03 
+	MOVF 0x11,W
+	SUBWF 0x03
+	INCF 0x03 
+	MOVF 0x01 , W
+	ADDWF 0x03
+	MOVF 0x03,W
+	MOVWF 0x21
+	MOVF 0x00 ,W 
+	MOVWF 0x20
+	MOVF 0x10,W
+	SUBWF 0x20
+	
+    final_program:
+	end
+
+

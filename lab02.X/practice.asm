@@ -1,0 +1,155 @@
+List p = 18f4520
+    #include<p18f4520.inc>
+	CONFIG OSC = INTIO67
+	CONFIG WDT = OFF
+	org 0x00
+	;0x63, 0x2B, 0xAA, 0xFD, 0xAA, 0xB2, 0x36, 0xDF
+	MOVLW 0xFA
+	MOVWF 0x01;
+	MOVLW 0xB2
+	MOVWF 0x02;
+	MOVLW 0xAF
+	MOVWF 0x03;
+	MOVLW 0x93
+	MOVWF 0x04;
+	MOVLW 0x85
+	MOVWF 0x05;
+	MOVLW 0x58
+	MOVWF 0x06;
+	MOVLW 0x39
+	MOVWF 0x07;
+	MOVLW 0x2B
+	MOVWF 0x08;
+
+	LFSR 0, 0x01
+	LFSR 1, 0x10
+	LFSR 2, 0x20
+	MOVLW 0x07
+	MOVWF 0x0A;i
+	MOVLW 0x08
+	MOVWF 0x0C;Fail
+	
+	
+	Loop:
+	    MOVLW 0x24
+	    CPFSLT FSR2L
+	    GOTO FINAL_SET
+	    MOVLW 0x00
+	    CPFSEQ INDF0
+	    GOTO Continue
+	    DECF 0x0A
+	    INCF FSR0L
+	    GOTO Loop
+	Continue:
+	    SWAPF INDF0
+	    MOVFF INDF0, INDF1
+	    MOVFF FSR0L, 0x0B
+	    MOVF 0x0A, w
+	    ADDWF FSR0L
+	    
+	Compare:
+	    MOVLW 0x00
+	    CPFSEQ INDF0
+	    GOTO Continue1
+	    DECF FSR0L
+	    MOVF 0x0B, w
+	    CPFSEQ FSR0L;, 0x0B
+	    GOTO Compare
+	    GOTO Fail
+	Continue1:
+	    MOVF INDF1, w
+	    CPFSEQ INDF0;, INDF1
+	    GOTO Not_equal
+	    GOTO Equal
+	Not_equal:
+	    DECF FSR0L, F
+	    MOVF 0x0B, w
+	    CPFSEQ FSR0L;, 0x0B
+	    GOTO Compare
+	    GOTO Fail
+	Equal:
+	    SWAPF INDF0
+	    MOVF INDF0, w
+	    CPFSLT INDF1;, INDF0
+	    GOTO SWAP
+	    INCF FSR1L
+	    MOVFF INDF0, POSTINC2
+	    MOVLW 0x00
+	    MOVWF POSTDEC0
+	GOBACK:
+	    MOVF 0x0B, w
+	    CPFSEQ FSR0L;, 0x0B
+	    DECF FSR0L
+	    CPFSEQ FSR0L;, 0x0B
+	    GOTO GOBACK
+	    INCF FSR0L
+	    DECF 0x0A
+	    GOTO Loop
+	SWAP:
+	    MOVFF INDF1, POSTINC2
+	    MOVFF INDF0, POSTINC1
+	    MOVLW 0x00
+	    MOVWF POSTDEC0
+	    MOVF 0x0B, w
+	    CPFSEQ FSR0L;, 0x0B
+	    GOTO GOBACK
+	    INCF FSR0L
+	    DECF 0x0A
+	    GOTO Loop
+	Fail:
+	    LFSR 0, 0x320
+	Fail1:
+	    MOVLW 0xFF
+	    MOVWF POSTINC0
+	    DECFSZ 0x0C
+	    GOTO Fail1
+	    GOTO LALA
+	FINAL_SET:
+	    LFSR 0, 0x320
+	    LFSR 1, 0x327
+	    LFSR 2, 0x010
+	FINAL_SET1: 
+	    MOVLW 0xFF
+	    MOVWF INDF0
+	    
+	    
+	FINAL1:
+	    
+	    MOVF INDF0, w
+	    CPFSGT INDF2
+	    GOTO FINAL_CHANGE
+	    INCF FSR2L
+	    MOVLW 0x13
+	    CPFSGT FSR2L
+	    GOTO FINAL1
+	    INCF FSR0L
+	    MOVFF 0x00, FSR2L
+	    MOVLW 0xFF
+	    MOVWF INDF2
+	    LFSR 2, 0x010
+	    MOVLW 0x23
+	    ;MOVF FSR0L , W
+	    CPFSEQ FSR0L
+	    GOTO FINAL_SET1
+	    GOTO FINISH_SET
+	FINAL_CHANGE:
+    
+	    MOVFF INDF2, INDF0
+	    MOVFF FSR2L, 0x00
+	    INCF FSR2L
+	    MOVLW 0x13
+	    CPFSGT FSR2L
+	    GOTO FINAL1
+	FINISH_SET:
+	    LFSR 0, 0x320
+	    LFSR 1, 0x327
+	    MOVLW 0x04
+	    MOVWF 0x0D
+	FINISH:
+	    SWAPF POSTINC0, 0
+	    MOVWF POSTDEC1
+	    DECFSZ 0x0D
+	    GOTO FINISH
+	LALA:
+    
+	end

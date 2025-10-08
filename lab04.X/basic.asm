@@ -1,0 +1,36 @@
+#INCLUDE <p18f4520.inc>
+    CONFIG OSC = INTIO67
+    CONFIG WDT = OFF 
+    org 0x00   
+    MOVLW 0xAB
+    MOVWF 0x02
+    MOVLW 0xCD 
+    MOVWF 0x03
+    MOVLW 0x56
+    MOVWF 0x04
+    MOVLW 0x78
+    MOVWF 0x05
+    
+    ;0x02 0x04 and adn store it into 0x00
+    MOVF 0x02 , W
+    MOVWF 0x00
+    MOVF 0x04,W
+    ANDWF 0x00
+    CLRF WREG
+    
+    ;0x03 and 0x05 store it into 0x01
+    MOVF 0x03,W
+    MOVWF 0x01
+    MOVF 0x05,W
+    ANDWF 0x01
+    
+    MOVF 0x01 , W
+    MOVWF 0x09
+    MOVF 0x00 ,W
+    MULWF 0x09
+    MOVFF PRODH, 0x010
+    MOVFF PRODL, 0x011
+    end
+    
+
+

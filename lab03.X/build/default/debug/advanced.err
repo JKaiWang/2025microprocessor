@@ -1,0 +1,4 @@
+Warning[207] C:\USERS\USER\MPLABXPROJECTS\LAB03.X\ADVANCED.ASM 15 : Found label after column 1. (start)
+Warning[207] C:\USERS\USER\MPLABXPROJECTS\LAB03.X\ADVANCED.ASM 21 : Found label after column 1. (substract)
+Warning[207] C:\USERS\USER\MPLABXPROJECTS\LAB03.X\ADVANCED.ASM 32 : Found label after column 1. (borrow)
+Warning[207] C:\USERS\USER\MPLABXPROJECTS\LAB03.X\ADVANCED.ASM 48 : Found label after column 1. (final_program)

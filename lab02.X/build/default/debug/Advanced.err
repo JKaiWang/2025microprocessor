@@ -1,0 +1,3 @@
+Warning[205] C:\USERS\USER\MPLABXPROJECTS\LAB02.X\ADVANCED.ASM 1 : Found directive in column 1. (LIST)
+Warning[202] C:\USERS\USER\MPLABXPROJECTS\LAB02.X\ADVANCED.ASM 51 : Argument out of range.  Least significant bits used.
+Warning[202] C:\USERS\USER\MPLABXPROJECTS\LAB02.X\ADVANCED.ASM 57 : Argument out of range.  Least significant bits used.

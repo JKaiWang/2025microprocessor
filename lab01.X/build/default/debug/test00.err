@@ -1,0 +1,3 @@
+Warning[205] C:\USERS\USER\MPLABXPROJECTS\LAB01.X\TEST00.ASM 1 : Found directive in column 1. (List)
+Warning[207] C:\USERS\USER\MPLABXPROJECTS\LAB01.X\TEST00.ASM 7 : Found label after column 1. (initial)
+Warning[207] C:\USERS\USER\MPLABXPROJECTS\LAB01.X\TEST00.ASM 11 : Found label after column 1. (start)
