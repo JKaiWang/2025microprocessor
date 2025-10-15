@@ -1,0 +1,203 @@
+
+
+Microchip MPLAB XC8 Assembler V2.45 build 20230818022343 
+                                                                                                           Wed Oct 15 22:43:55 2025
+
+
+     1                           	processor	18F4520
+     2                           	pagewidth 132
+     3                           	opt	flic
+     4                           	psect	udata_acs,global,class=COMRAM,space=1,delta=1,lowdata,noexec
+     5                           	psect	udata_bank0,global,class=BANK0,space=1,delta=1,lowdata,noexec
+     6                           	psect	udata_bank1,global,class=BANK1,space=1,delta=1,lowdata,noexec
+     7                           	psect	udata_bank2,global,class=BANK2,space=1,delta=1,lowdata,noexec
+     8                           	psect	udata_bank3,global,class=BANK3,space=1,delta=1,lowdata,noexec
+     9                           	psect	udata_bank4,global,class=BANK4,space=1,delta=1,lowdata,noexec
+    10                           	psect	udata_bank5,global,class=BANK5,space=1,delta=1,lowdata,noexec
+    11                           	psect	udata,global,class=RAM,space=1,delta=1,noexec
+    12                           	psect	code,global,reloc=2,class=CODE,delta=1
+    13                           	psect	data,global,reloc=2,class=CONST,delta=1,noexec
+    14                           	psect	edata,global,class=EEDATA,space=3,delta=1,noexec
+    15                           	psect	text,global,reloc=2,class=CODE,delta=1
+    16   000000                     
+    17                           	psect	edata
+    18   000000                     stk_offset	set	0
+    19   000000                     auto_size	set	0
+    20                           
+    21                           ; stack_auto defines a symbol /name/_offset which equates to the
+    22                           ; stack offset of the auto object in question
+    23   000000                     
+    24                           ; stack_param defines a symbol /name/_offset which equates to the
+    25                           ; stack offset of the parameter object in question
+    26   000000                     
+    27                           ; alloc_stack adjusts the SP to allocate space for auto objects
+    28                           ; it also links in to the btemp symbol so that can be used
+    29   000000                     
+    30                           ; restore_stack adjusts the SP to remove all auto and parameter
+    31                           ; objects from the stack prior to returning from a function
+    32   000000                     
+    33                           	psect	text
+    34   000602  90D1               	bcf	4049,0,c
+    35   000604                     _count_primes:
+    36                           	callstack 0
+    37                           
+    38                           ; ? m == 0xFFFF ? ?? 0xFFFE
+    39   000604  5003               	movf	3,w,c
+    40   000606  0AFF               	xorlw	255
+    41   000608  E107               	bnz	skip_fix_m
+    42   00060A  5004               	movf	4,w,c
+    43   00060C  0AFF               	xorlw	255
+    44   00060E  E104               	bnz	skip_fix_m
+    45   000610  0EFE               	movlw	254
+    46   000612  6E03               	movwf	3,c
+    47   000614  0EFF               	movlw	255
+    48   000616  6E04               	movwf	4,c
+    49   000618                     skip_fix_m:
+    50   000618  6A10               	clrf	16,c
+    51   00061A  6A11               	clrf	17,c
+    52   00061C                     loop_start:
+    53                           
+    54                           ; if (n > m) ? break
+    55   00061C  5004               	movf	4,w,c
+    56   00061E  6402               	cpfsgt	2,c
+    57   000620  D001               	bra	high_equal_check
+    58   000622  D015               	goto	end_loop
+    59   000624                     high_equal_check:
+    60   000624  5004               	movf	4,w,c
+    61   000626  6202               	cpfseq	2,c
+    62   000628  D004               	goto	loop_continue
+    63   00062A  5003               	movf	3,w,c
+    64   00062C  6401               	cpfsgt	1,c
+    65   00062E  D001               	goto	loop_continue
+    66   000630  D00E               	goto	end_loop
+    67   000632                     loop_continue:
+    68   000632  C001 F020          	movff	1,32
+    69   000636  C002 F021          	movff	2,33
+    70   00063A  D00E               	goto	is_prime_entry
+    71   00063C                     is_prime_return:
+    72   00063C  5012               	movf	18,w,c
+    73   00063E  E003               	bz	skip_inc
+    74   000640  2A10               	incf	16,f,c
+    75   000642  B4D8               	btfsc	status,2,c
+    76   000644  2A11               	incf	17,f,c
+    77   000646                     skip_inc:
+    78   000646  2A01               	incf	1,f,c
+    79   000648  B4D8               	btfsc	status,2,c
+    80   00064A  2A02               	incf	2,f,c
+    81   00064C  D7E7               	goto	loop_start
+    82   00064E                     end_loop:
+    83   00064E  5010               	movf	16,w,c
+    84   000650  6E01               	movwf	1,c
+    85   000652  5011               	movf	17,w,c
+    86   000654  6E02               	movwf	2,c
+    87   000656  D034               	goto	end_program
+    88   000658                     is_prime_entry:
+    89   000658  5021               	movf	33,w,c
+    90   00065A  E104               	bnz	prime_check
+    91   00065C  0E02               	movlw	2
+    92   00065E  6020               	cpfslt	32,c
+    93   000660  D001               	goto	prime_check
+    94   000662  D01B               	goto	not_prime
+    95   000664                     prime_check:
+    96   000664  0E02               	movlw	2
+    97   000666  6E22               	movwf	34,c
+    98   000668  6A23               	clrf	35,c
+    99   00066A                     check_loop:
+   100   00066A  5022               	movf	34,w,c
+   101   00066C  1820               	xorwf	32,w,c
+   102   00066E  E103               	bnz	skip_equal
+   103   000670  5023               	movf	35,w,c
+   104   000672  1821               	xorwf	33,w,c
+   105   000674  E010               	bz	no_factor_found
+   106   000676                     skip_equal:
+   107   000676  C020 F030          	movff	32,48
+   108   00067A  C021 F031          	movff	33,49
+   109   00067E  C022 F032          	movff	34,50
+   110   000682  C023 F033          	movff	35,51
+   111   000686  D00C               	goto	mod16_entry
+   112   000688                     mod16_return:
+   113   000688  5034               	movf	52,w,c
+   114   00068A  1035               	iorwf	53,w,c
+   115   00068C  E006               	bz	not_prime
+   116   00068E  2A22               	incf	34,f,c
+   117   000690  B4D8               	btfsc	status,2,c
+   118   000692  2A23               	incf	35,f,c
+   119   000694  D7EA               	goto	check_loop
+   120   000696                     no_factor_found:
+   121   000696  0E01               	movlw	1
+   122   000698  D001               	goto	L2
+   123   00069A                     not_prime:
+   124   00069A  0E00               	movlw	0
+   125   00069C                     L2:
+   126   00069C  6E12               	movwf	18,c
+   127   00069E  D7CE               	goto	is_prime_return
+   128   0006A0                     mod16_entry:
+   129   0006A0  5033               	movf	51,w,c
+   130   0006A2  5C31               	subwf	49,w,c
+   131   0006A4  E102               	bnz	mod_low
+   132   0006A6  5032               	movf	50,w,c
+   133   0006A8  5C30               	subwf	48,w,c
+   134   0006AA                     mod_low:
+   135   0006AA  E305               	bnc	mod_done
+   136   0006AC  5032               	movf	50,w,c
+   137   0006AE  5E30               	subwf	48,f,c
+   138   0006B0  5033               	movf	51,w,c
+   139   0006B2  5A31               	subwfb	49,f,c
+   140   0006B4  D7F5               	goto	mod16_entry
+   141   0006B6                     mod_done:
+   142   0006B6  C030 F034          	movff	48,52
+   143   0006BA  C031 F035          	movff	49,53
+   144   0006BE  D7E4               	goto	mod16_return
+   145   0006C0                     end_program:
+   146   0006C0  0000               	nop	
+   147   0006C2  0012               	return	
+   148                           tosu	equ	0xFFF
+   149                           tosh	equ	0xFFE
+   150                           tosl	equ	0xFFD
+   151                           stkptr	equ	0xFFC
+   152                           pclatu	equ	0xFFB
+   153                           pclath	equ	0xFFA
+   154                           pcl	equ	0xFF9
+   155                           tblptru	equ	0xFF8
+   156                           tblptrh	equ	0xFF7
+   157                           tblptrl	equ	0xFF6
+   158                           tablat	equ	0xFF5
+   159                           prodh	equ	0xFF4
+   160                           prodl	equ	0xFF3
+   161                           indf0	equ	0xFEF
+   162                           postinc0	equ	0xFEE
+   163                           postdec0	equ	0xFED
+   164                           preinc0	equ	0xFEC
+   165                           plusw0	equ	0xFEB
+   166                           fsr0h	equ	0xFEA
+   167                           fsr0l	equ	0xFE9
+   168                           wreg	equ	0xFE8
+   169                           indf1	equ	0xFE7
+   170                           postinc1	equ	0xFE6
+   171                           postdec1	equ	0xFE5
+   172                           preinc1	equ	0xFE4
+   173                           plusw1	equ	0xFE3
+   174                           fsr1h	equ	0xFE2
+   175                           fsr1l	equ	0xFE1
+   176                           bsr	equ	0xFE0
+   177                           indf2	equ	0xFDF
+   178                           postinc2	equ	0xFDE
+   179                           postdec2	equ	0xFDD
+   180                           preinc2	equ	0xFDC
+   181                           plusw2	equ	0xFDB
+   182                           fsr2h	equ	0xFDA
+   183                           fsr2l	equ	0xFD9
+   184                           status	equ	0xFD8
+
+
+Microchip Technology PIC18 Macro Assembler V2.45 build 20230818022343 
+Symbol Table                                                                                               Wed Oct 15 22:43:55 2025
+
+                           Z 0002                        WDTCON 0FD1                        STATUS 0FD8  
+             no_factor_found 0696                       isa$std 0001                       mod_low 06AA  
+                    end_loop 064E                      mod_done 06B6                      skip_inc 0646  
+                 mod16_entry 06A0                   end_program 06C0              high_equal_check 0624  
+               _count_primes 0604                    check_loop 066A                 loop_continue 0632  
+                 prime_check 0664                    loop_start 061C                     isa$xinst 0000  
+                  skip_fix_m 0618                    skip_equal 0676                     not_prime 069A  
+             is_prime_return 063C                  mod16_return 0688                is_prime_entry 0658  
