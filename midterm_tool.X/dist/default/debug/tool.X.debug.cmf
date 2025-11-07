@@ -1,0 +1,134 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$build/default/debug/stair_mul.o
+__absolute__ - 0 0 0 40 1 1
+config CONFIG 4 300001 300001 D 1 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 80-5FF 1
+SFR F80-FFF 1
+BANK0 80-FF 1
+BANK1 100-1FF 1
+BANK2 200-2FF 1
+BANK3 300-3FF 1
+BANK4 400-4FF 1
+BANK5 500-5FF 1
+CONST 40-7FFF 1
+IDLOC 200000-200007 1
+SMALLCONST 600-7FFF 1
+CODE 40-7FFF 1
+BIGRAM 40-5FF 1
+BIGSFR F80-FFF 1
+COMRAM 40-7F 1
+CONFIG 300000-300000 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST 600-7FFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$build/default/debug/stair_mul.o
+0 __absolute__ ABS >11:/Users/jkaiwang/MPLABXProjects/tool.X/stair_mul.asm
+2 __absolute__ ABS >12:/Users/jkaiwang/MPLABXProjects/tool.X/stair_mul.asm
+4 __absolute__ ABS >14:/Users/jkaiwang/MPLABXProjects/tool.X/stair_mul.asm
+6 __absolute__ ABS >15:/Users/jkaiwang/MPLABXProjects/tool.X/stair_mul.asm
+8 __absolute__ ABS >16:/Users/jkaiwang/MPLABXProjects/tool.X/stair_mul.asm
+A __absolute__ ABS >18:/Users/jkaiwang/MPLABXProjects/tool.X/stair_mul.asm
+C __absolute__ ABS >19:/Users/jkaiwang/MPLABXProjects/tool.X/stair_mul.asm
+E __absolute__ ABS >20:/Users/jkaiwang/MPLABXProjects/tool.X/stair_mul.asm
+10 __absolute__ ABS >21:/Users/jkaiwang/MPLABXProjects/tool.X/stair_mul.asm
+14 __absolute__ ABS >22:/Users/jkaiwang/MPLABXProjects/tool.X/stair_mul.asm
+16 __absolute__ ABS >23:/Users/jkaiwang/MPLABXProjects/tool.X/stair_mul.asm
+18 __absolute__ ABS >24:/Users/jkaiwang/MPLABXProjects/tool.X/stair_mul.asm
+1C __absolute__ ABS >25:/Users/jkaiwang/MPLABXProjects/tool.X/stair_mul.asm
+20 __absolute__ ABS >28:/Users/jkaiwang/MPLABXProjects/tool.X/stair_mul.asm
+22 __absolute__ ABS >29:/Users/jkaiwang/MPLABXProjects/tool.X/stair_mul.asm
+24 __absolute__ ABS >30:/Users/jkaiwang/MPLABXProjects/tool.X/stair_mul.asm
+26 __absolute__ ABS >32:/Users/jkaiwang/MPLABXProjects/tool.X/stair_mul.asm
+28 __absolute__ ABS >33:/Users/jkaiwang/MPLABXProjects/tool.X/stair_mul.asm
+2A __absolute__ ABS >34:/Users/jkaiwang/MPLABXProjects/tool.X/stair_mul.asm
+2E __absolute__ ABS >35:/Users/jkaiwang/MPLABXProjects/tool.X/stair_mul.asm
+30 __absolute__ ABS >36:/Users/jkaiwang/MPLABXProjects/tool.X/stair_mul.asm
+32 __absolute__ ABS >37:/Users/jkaiwang/MPLABXProjects/tool.X/stair_mul.asm
+34 __absolute__ ABS >38:/Users/jkaiwang/MPLABXProjects/tool.X/stair_mul.asm
+36 __absolute__ ABS >39:/Users/jkaiwang/MPLABXProjects/tool.X/stair_mul.asm
+3A __absolute__ ABS >40:/Users/jkaiwang/MPLABXProjects/tool.X/stair_mul.asm
+3E __absolute__ ABS >42:/Users/jkaiwang/MPLABXProjects/tool.X/stair_mul.asm
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__Hspace_0 40 0 ABS 0 - -
+__Hspace_4 60000F 0 ABS 0 - -
+__L__absolute__ 0 0 ABS 0 __absolute__ -
+isa$xinst 0 0 ABS 0 - build/default/debug/stair_mul.o
+__Hconfig 30000E 0 CONFIG 4 config -
+__Lconfig 0 0 CONFIG 4 config -
+isa$std 1 0 ABS 0 - build/default/debug/stair_mul.o
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+__H__absolute__ 40 0 ABS 0 __absolute__ -
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES

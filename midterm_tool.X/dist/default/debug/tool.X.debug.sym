@@ -1,0 +1,40 @@
+__Hconfig 30000E 0 CONFIG 4
+__Lconfig 0 0 CONFIG 4
+isa$xinst 0 0 ABS 0
+isa$std 1 0 ABS 0
+__H__absolute__ 40 0 ABS 0
+__L__absolute__ 0 0 ABS 0
+__Hspace_0 40 0 ABS 0
+__Lspace_0 0 0 ABS 0
+__Hspace_4 60000F 0 ABS 0
+__Lspace_4 0 0 ABS 0
+%segments
+%locals
+build/default/debug/stair_mul.o
+stair_mul.asm
+11 0 0 ABS 0
+12 2 0 ABS 0
+14 4 0 ABS 0
+15 6 0 ABS 0
+16 8 0 ABS 0
+18 A 0 ABS 0
+19 C 0 ABS 0
+20 E 0 ABS 0
+21 10 0 ABS 0
+22 14 0 ABS 0
+23 16 0 ABS 0
+24 18 0 ABS 0
+25 1C 0 ABS 0
+28 20 0 ABS 0
+29 22 0 ABS 0
+30 24 0 ABS 0
+32 26 0 ABS 0
+33 28 0 ABS 0
+34 2A 0 ABS 0
+35 2E 0 ABS 0
+36 30 0 ABS 0
+37 32 0 ABS 0
+38 34 0 ABS 0
+39 36 0 ABS 0
+40 3A 0 ABS 0
+42 3E 0 ABS 0

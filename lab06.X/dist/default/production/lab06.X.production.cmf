@@ -1,0 +1,210 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$build/default/production/basic.o
+__absolute__ - 0 0 0 DC 1 1
+config CONFIG 4 300001 300001 D 1 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM DC-5FF 1
+SFR F80-FFF 1
+BANK0 DC-FF 1
+BANK1 100-1FF 1
+BANK2 200-2FF 1
+BANK3 300-3FF 1
+BANK4 400-4FF 1
+BANK5 500-5FF 1
+CONST DC-7FFF 1
+IDLOC 200000-200007 1
+SMALLCONST 600-7FFF 1
+CODE DC-7FFF 1
+BIGRAM DC-5FF 1
+BIGSFR F80-FFF 1
+CONFIG 300000-300000 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST 600-7FFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$build/default/production/basic.o
+0 __absolute__ ABS >40:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+2 __absolute__ ABS >41:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+4 __absolute__ ABS >42:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+6 __absolute__ ABS >43:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+8 __absolute__ ABS >45:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+A __absolute__ ABS >46:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+C __absolute__ ABS >47:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+E __absolute__ ABS >48:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+10 __absolute__ ABS >49:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+12 __absolute__ ABS >50:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+14 __absolute__ ABS >52:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+16 __absolute__ ABS >53:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+18 __absolute__ ABS >54:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+1A __absolute__ ABS >56:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+1C __absolute__ ABS >57:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+1E __absolute__ ABS >58:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+22 __absolute__ ABS >59:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+24 __absolute__ ABS >60:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+26 __absolute__ ABS >60:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+28 __absolute__ ABS >60:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+2A __absolute__ ABS >60:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+2C __absolute__ ABS >60:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+2E __absolute__ ABS >60:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+30 __absolute__ ABS >60:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+32 __absolute__ ABS >60:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+34 __absolute__ ABS >60:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+36 __absolute__ ABS >60:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+38 __absolute__ ABS >60:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+3A __absolute__ ABS >60:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+3C __absolute__ ABS >60:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+3E __absolute__ ABS >61:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+42 __absolute__ ABS >63:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+44 __absolute__ ABS >64:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+46 __absolute__ ABS >65:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+4A __absolute__ ABS >66:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+4C __absolute__ ABS >67:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+4E __absolute__ ABS >68:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+50 __absolute__ ABS >68:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+52 __absolute__ ABS >68:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+54 __absolute__ ABS >68:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+56 __absolute__ ABS >68:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+58 __absolute__ ABS >68:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+5A __absolute__ ABS >68:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+5C __absolute__ ABS >68:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+5E __absolute__ ABS >68:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+60 __absolute__ ABS >68:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+62 __absolute__ ABS >68:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+64 __absolute__ ABS >68:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+66 __absolute__ ABS >68:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+68 __absolute__ ABS >69:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+6C __absolute__ ABS >71:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+6E __absolute__ ABS >72:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+70 __absolute__ ABS >73:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+74 __absolute__ ABS >74:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+76 __absolute__ ABS >75:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+78 __absolute__ ABS >76:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+7A __absolute__ ABS >76:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+7C __absolute__ ABS >76:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+7E __absolute__ ABS >76:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+80 __absolute__ ABS >76:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+82 __absolute__ ABS >76:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+84 __absolute__ ABS >76:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+86 __absolute__ ABS >76:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+88 __absolute__ ABS >76:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+8A __absolute__ ABS >76:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+8C __absolute__ ABS >76:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+8E __absolute__ ABS >76:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+90 __absolute__ ABS >76:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+92 __absolute__ ABS >77:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+96 __absolute__ ABS >79:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+98 __absolute__ ABS >80:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+9A __absolute__ ABS >81:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+9C __absolute__ ABS >81:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+9E __absolute__ ABS >81:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+A0 __absolute__ ABS >81:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+A2 __absolute__ ABS >81:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+A4 __absolute__ ABS >81:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+A6 __absolute__ ABS >81:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+A8 __absolute__ ABS >81:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+AA __absolute__ ABS >81:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+AC __absolute__ ABS >81:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+AE __absolute__ ABS >81:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+B0 __absolute__ ABS >81:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+B2 __absolute__ ABS >81:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+B4 __absolute__ ABS >83:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+B6 __absolute__ ABS >84:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+B8 __absolute__ ABS >85:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+BA __absolute__ ABS >86:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+BE __absolute__ ABS >87:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+C0 __absolute__ ABS >89:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+C2 __absolute__ ABS >89:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+C4 __absolute__ ABS >89:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+C6 __absolute__ ABS >89:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+C8 __absolute__ ABS >89:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+CA __absolute__ ABS >89:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+CC __absolute__ ABS >89:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+CE __absolute__ ABS >89:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+D0 __absolute__ ABS >89:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+D2 __absolute__ ABS >89:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+D4 __absolute__ ABS >89:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+D6 __absolute__ ABS >89:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+D8 __absolute__ ABS >89:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+DA __absolute__ ABS >90:/Users/jkaiwang/MPLABXProjects/lab06.X/basic.asm
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__Hspace_0 DC 0 ABS 0 - -
+__Hspace_4 60000F 0 ABS 0 - -
+__L__absolute__ 0 0 ABS 0 __absolute__ -
+isa$xinst 0 0 ABS 0 - build/default/production/basic.o
+__Hconfig 30000E 0 CONFIG 4 config -
+__Lconfig 0 0 CONFIG 4 config -
+isa$std 1 0 ABS 0 - build/default/production/basic.o
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+__H__absolute__ DC 0 ABS 0 __absolute__ -
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES

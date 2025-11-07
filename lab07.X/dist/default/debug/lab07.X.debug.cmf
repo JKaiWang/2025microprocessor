@@ -1,0 +1,724 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$build/default/debug/basic.o
+__absolute__ - 0 0 0 522 1 1
+config CONFIG 4 300001 300001 D 1 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 522-5FF 1
+SFR F80-FFF 1
+BANK5 522-5FF 1
+CONST 522-7FFF 1
+IDLOC 200000-200007 1
+SMALLCONST 600-7FFF 1
+CODE 522-7FFF 1
+BIGRAM 522-5FF 1
+BIGSFR F80-FFF 1
+CONFIG 300000-300000 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST 600-7FFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$build/default/debug/basic.o
+0 __absolute__ ABS >33:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+8 __absolute__ ABS >38:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+A __absolute__ ABS >39:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+C __absolute__ ABS >40:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+E __absolute__ ABS >44:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+10 __absolute__ ABS >45:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+12 __absolute__ ABS >46:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+14 __absolute__ ABS >47:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+16 __absolute__ ABS >48:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+18 __absolute__ ABS >49:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1A __absolute__ ABS >50:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1C __absolute__ ABS >51:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1E __absolute__ ABS >52:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+20 __absolute__ ABS >56:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+22 __absolute__ ABS >57:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+24 __absolute__ ABS >57:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+26 __absolute__ ABS >57:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+28 __absolute__ ABS >57:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2A __absolute__ ABS >57:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2C __absolute__ ABS >57:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2E __absolute__ ABS >57:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+30 __absolute__ ABS >57:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+32 __absolute__ ABS >57:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+34 __absolute__ ABS >57:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+36 __absolute__ ABS >57:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+38 __absolute__ ABS >57:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3A __absolute__ ABS >57:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3C __absolute__ ABS >57:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3E __absolute__ ABS >59:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+40 __absolute__ ABS >60:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+44 __absolute__ ABS >61:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+46 __absolute__ ABS >62:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+48 __absolute__ ABS >62:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4A __absolute__ ABS >62:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4C __absolute__ ABS >62:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4E __absolute__ ABS >62:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+50 __absolute__ ABS >62:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+52 __absolute__ ABS >62:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+54 __absolute__ ABS >62:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+56 __absolute__ ABS >62:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+58 __absolute__ ABS >62:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+5A __absolute__ ABS >62:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+5C __absolute__ ABS >62:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+5E __absolute__ ABS >62:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+60 __absolute__ ABS >62:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+62 __absolute__ ABS >63:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+64 __absolute__ ABS >65:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+66 __absolute__ ABS >66:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+6A __absolute__ ABS >67:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+6C __absolute__ ABS >68:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+6E __absolute__ ABS >68:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+70 __absolute__ ABS >68:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+72 __absolute__ ABS >68:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+74 __absolute__ ABS >68:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+76 __absolute__ ABS >68:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+78 __absolute__ ABS >68:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+7A __absolute__ ABS >68:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+7C __absolute__ ABS >68:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+7E __absolute__ ABS >68:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+80 __absolute__ ABS >68:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+82 __absolute__ ABS >68:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+84 __absolute__ ABS >68:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+86 __absolute__ ABS >68:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+88 __absolute__ ABS >69:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+8A __absolute__ ABS >71:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+8C __absolute__ ABS >72:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+90 __absolute__ ABS >73:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+92 __absolute__ ABS >74:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+94 __absolute__ ABS >75:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+96 __absolute__ ABS >75:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+98 __absolute__ ABS >75:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+9A __absolute__ ABS >75:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+9C __absolute__ ABS >75:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+9E __absolute__ ABS >75:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+A0 __absolute__ ABS >75:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+A2 __absolute__ ABS >75:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+A4 __absolute__ ABS >75:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+A6 __absolute__ ABS >75:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+A8 __absolute__ ABS >75:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+AA __absolute__ ABS >75:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+AC __absolute__ ABS >75:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+AE __absolute__ ABS >75:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+B0 __absolute__ ABS >76:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+B2 __absolute__ ABS >78:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+B4 __absolute__ ABS >79:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+B8 __absolute__ ABS >80:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+BA __absolute__ ABS >81:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+BC __absolute__ ABS >81:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+BE __absolute__ ABS >81:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+C0 __absolute__ ABS >81:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+C2 __absolute__ ABS >81:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+C4 __absolute__ ABS >81:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+C6 __absolute__ ABS >81:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+C8 __absolute__ ABS >81:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+CA __absolute__ ABS >81:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+CC __absolute__ ABS >81:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+CE __absolute__ ABS >81:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+D0 __absolute__ ABS >81:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+D2 __absolute__ ABS >81:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+D4 __absolute__ ABS >81:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+D6 __absolute__ ABS >82:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+D8 __absolute__ ABS >84:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+DA __absolute__ ABS >85:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+DE __absolute__ ABS >86:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+E0 __absolute__ ABS >87:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+E2 __absolute__ ABS >88:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+E4 __absolute__ ABS >88:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+E6 __absolute__ ABS >88:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+E8 __absolute__ ABS >88:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+EA __absolute__ ABS >88:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+EC __absolute__ ABS >88:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+EE __absolute__ ABS >88:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+F0 __absolute__ ABS >88:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+F2 __absolute__ ABS >88:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+F4 __absolute__ ABS >88:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+F6 __absolute__ ABS >88:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+F8 __absolute__ ABS >88:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+FA __absolute__ ABS >88:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+FC __absolute__ ABS >88:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+FE __absolute__ ABS >89:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+100 __absolute__ ABS >91:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+102 __absolute__ ABS >92:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+106 __absolute__ ABS >93:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+108 __absolute__ ABS >94:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+10A __absolute__ ABS >95:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+10C __absolute__ ABS >95:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+10E __absolute__ ABS >95:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+110 __absolute__ ABS >95:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+112 __absolute__ ABS >95:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+114 __absolute__ ABS >95:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+116 __absolute__ ABS >95:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+118 __absolute__ ABS >95:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+11A __absolute__ ABS >95:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+11C __absolute__ ABS >95:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+11E __absolute__ ABS >95:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+120 __absolute__ ABS >95:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+122 __absolute__ ABS >95:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+124 __absolute__ ABS >95:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+126 __absolute__ ABS >96:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+128 __absolute__ ABS >98:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+12A __absolute__ ABS >99:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+12E __absolute__ ABS >100:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+130 __absolute__ ABS >101:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+132 __absolute__ ABS >102:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+134 __absolute__ ABS >103:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+136 __absolute__ ABS >103:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+138 __absolute__ ABS >103:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+13A __absolute__ ABS >103:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+13C __absolute__ ABS >103:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+13E __absolute__ ABS >103:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+140 __absolute__ ABS >103:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+142 __absolute__ ABS >103:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+144 __absolute__ ABS >103:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+146 __absolute__ ABS >103:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+148 __absolute__ ABS >103:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+14A __absolute__ ABS >103:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+14C __absolute__ ABS >103:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+14E __absolute__ ABS >103:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+150 __absolute__ ABS >104:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+152 __absolute__ ABS >106:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+154 __absolute__ ABS >107:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+158 __absolute__ ABS >108:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+15A __absolute__ ABS >109:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+15C __absolute__ ABS >109:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+15E __absolute__ ABS >109:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+160 __absolute__ ABS >109:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+162 __absolute__ ABS >109:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+164 __absolute__ ABS >109:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+166 __absolute__ ABS >109:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+168 __absolute__ ABS >109:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+16A __absolute__ ABS >109:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+16C __absolute__ ABS >109:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+16E __absolute__ ABS >109:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+170 __absolute__ ABS >109:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+172 __absolute__ ABS >109:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+174 __absolute__ ABS >109:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+176 __absolute__ ABS >110:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+178 __absolute__ ABS >112:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+17A __absolute__ ABS >113:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+17E __absolute__ ABS >114:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+180 __absolute__ ABS >115:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+182 __absolute__ ABS >116:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+184 __absolute__ ABS >116:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+186 __absolute__ ABS >116:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+188 __absolute__ ABS >116:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+18A __absolute__ ABS >116:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+18C __absolute__ ABS >116:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+18E __absolute__ ABS >116:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+190 __absolute__ ABS >116:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+192 __absolute__ ABS >116:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+194 __absolute__ ABS >116:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+196 __absolute__ ABS >116:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+198 __absolute__ ABS >116:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+19A __absolute__ ABS >116:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+19C __absolute__ ABS >116:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+19E __absolute__ ABS >117:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1A0 __absolute__ ABS >119:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1A2 __absolute__ ABS >120:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1A6 __absolute__ ABS >121:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1A8 __absolute__ ABS >122:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1AA __absolute__ ABS >123:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1AC __absolute__ ABS >123:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1AE __absolute__ ABS >123:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1B0 __absolute__ ABS >123:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1B2 __absolute__ ABS >123:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1B4 __absolute__ ABS >123:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1B6 __absolute__ ABS >123:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1B8 __absolute__ ABS >123:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1BA __absolute__ ABS >123:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1BC __absolute__ ABS >123:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1BE __absolute__ ABS >123:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1C0 __absolute__ ABS >123:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1C2 __absolute__ ABS >123:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1C4 __absolute__ ABS >123:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1C6 __absolute__ ABS >124:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1C8 __absolute__ ABS >126:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1CA __absolute__ ABS >127:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1CE __absolute__ ABS >128:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1D0 __absolute__ ABS >129:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1D2 __absolute__ ABS >130:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1D4 __absolute__ ABS >131:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1D6 __absolute__ ABS >131:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1D8 __absolute__ ABS >131:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1DA __absolute__ ABS >131:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1DC __absolute__ ABS >131:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1DE __absolute__ ABS >131:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1E0 __absolute__ ABS >131:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1E2 __absolute__ ABS >131:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1E4 __absolute__ ABS >131:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1E6 __absolute__ ABS >131:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1E8 __absolute__ ABS >131:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1EA __absolute__ ABS >131:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1EC __absolute__ ABS >131:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1EE __absolute__ ABS >131:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1F0 __absolute__ ABS >132:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1F2 __absolute__ ABS >134:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1F4 __absolute__ ABS >135:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1F8 __absolute__ ABS >136:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1FA __absolute__ ABS >137:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1FC __absolute__ ABS >138:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+1FE __absolute__ ABS >138:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+200 __absolute__ ABS >138:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+202 __absolute__ ABS >138:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+204 __absolute__ ABS >138:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+206 __absolute__ ABS >138:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+208 __absolute__ ABS >138:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+20A __absolute__ ABS >138:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+20C __absolute__ ABS >138:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+20E __absolute__ ABS >138:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+210 __absolute__ ABS >138:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+212 __absolute__ ABS >138:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+214 __absolute__ ABS >138:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+216 __absolute__ ABS >138:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+218 __absolute__ ABS >139:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+21A __absolute__ ABS >141:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+21C __absolute__ ABS >142:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+220 __absolute__ ABS >143:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+222 __absolute__ ABS >144:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+224 __absolute__ ABS >145:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+226 __absolute__ ABS >146:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+228 __absolute__ ABS >146:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+22A __absolute__ ABS >146:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+22C __absolute__ ABS >146:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+22E __absolute__ ABS >146:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+230 __absolute__ ABS >146:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+232 __absolute__ ABS >146:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+234 __absolute__ ABS >146:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+236 __absolute__ ABS >146:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+238 __absolute__ ABS >146:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+23A __absolute__ ABS >146:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+23C __absolute__ ABS >146:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+23E __absolute__ ABS >146:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+240 __absolute__ ABS >146:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+242 __absolute__ ABS >147:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+244 __absolute__ ABS >149:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+246 __absolute__ ABS >150:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+24A __absolute__ ABS >151:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+24C __absolute__ ABS >152:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+24E __absolute__ ABS >153:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+250 __absolute__ ABS >154:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+252 __absolute__ ABS >154:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+254 __absolute__ ABS >154:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+256 __absolute__ ABS >154:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+258 __absolute__ ABS >154:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+25A __absolute__ ABS >154:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+25C __absolute__ ABS >154:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+25E __absolute__ ABS >154:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+260 __absolute__ ABS >154:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+262 __absolute__ ABS >154:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+264 __absolute__ ABS >154:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+266 __absolute__ ABS >154:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+268 __absolute__ ABS >154:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+26A __absolute__ ABS >154:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+26C __absolute__ ABS >155:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+26E __absolute__ ABS >157:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+270 __absolute__ ABS >158:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+274 __absolute__ ABS >159:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+276 __absolute__ ABS >160:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+278 __absolute__ ABS >161:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+27A __absolute__ ABS >162:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+27C __absolute__ ABS >163:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+27E __absolute__ ABS >163:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+280 __absolute__ ABS >163:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+282 __absolute__ ABS >163:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+284 __absolute__ ABS >163:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+286 __absolute__ ABS >163:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+288 __absolute__ ABS >163:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+28A __absolute__ ABS >163:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+28C __absolute__ ABS >163:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+28E __absolute__ ABS >163:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+290 __absolute__ ABS >163:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+292 __absolute__ ABS >163:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+294 __absolute__ ABS >163:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+296 __absolute__ ABS >163:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+298 __absolute__ ABS >164:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+29A __absolute__ ABS >167:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+29C __absolute__ ABS >168:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2A0 __absolute__ ABS >169:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2A2 __absolute__ ABS >170:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2A4 __absolute__ ABS >171:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2A6 __absolute__ ABS >172:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2A8 __absolute__ ABS >173:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2AA __absolute__ ABS >173:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2AC __absolute__ ABS >173:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2AE __absolute__ ABS >173:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2B0 __absolute__ ABS >173:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2B2 __absolute__ ABS >173:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2B4 __absolute__ ABS >173:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2B6 __absolute__ ABS >173:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2B8 __absolute__ ABS >173:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2BA __absolute__ ABS >173:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2BC __absolute__ ABS >173:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2BE __absolute__ ABS >173:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2C0 __absolute__ ABS >173:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2C2 __absolute__ ABS >173:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2C4 __absolute__ ABS >174:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2C6 __absolute__ ABS >176:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2C8 __absolute__ ABS >177:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2CC __absolute__ ABS >178:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2CE __absolute__ ABS >179:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2D0 __absolute__ ABS >180:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2D2 __absolute__ ABS >181:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2D4 __absolute__ ABS >181:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2D6 __absolute__ ABS >181:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2D8 __absolute__ ABS >181:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2DA __absolute__ ABS >181:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2DC __absolute__ ABS >181:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2DE __absolute__ ABS >181:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2E0 __absolute__ ABS >181:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2E2 __absolute__ ABS >181:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2E4 __absolute__ ABS >181:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2E6 __absolute__ ABS >181:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2E8 __absolute__ ABS >181:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2EA __absolute__ ABS >181:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2EC __absolute__ ABS >181:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2EE __absolute__ ABS >182:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2F0 __absolute__ ABS >184:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2F2 __absolute__ ABS >185:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2F6 __absolute__ ABS >186:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2F8 __absolute__ ABS >187:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2FA __absolute__ ABS >188:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2FC __absolute__ ABS >189:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+2FE __absolute__ ABS >189:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+300 __absolute__ ABS >189:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+302 __absolute__ ABS >189:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+304 __absolute__ ABS >189:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+306 __absolute__ ABS >189:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+308 __absolute__ ABS >189:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+30A __absolute__ ABS >189:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+30C __absolute__ ABS >189:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+30E __absolute__ ABS >189:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+310 __absolute__ ABS >189:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+312 __absolute__ ABS >189:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+314 __absolute__ ABS >189:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+316 __absolute__ ABS >189:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+318 __absolute__ ABS >190:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+31A __absolute__ ABS >192:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+31C __absolute__ ABS >193:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+320 __absolute__ ABS >194:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+322 __absolute__ ABS >195:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+324 __absolute__ ABS >196:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+326 __absolute__ ABS >196:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+328 __absolute__ ABS >196:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+32A __absolute__ ABS >196:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+32C __absolute__ ABS >196:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+32E __absolute__ ABS >196:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+330 __absolute__ ABS >196:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+332 __absolute__ ABS >196:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+334 __absolute__ ABS >196:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+336 __absolute__ ABS >196:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+338 __absolute__ ABS >196:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+33A __absolute__ ABS >196:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+33C __absolute__ ABS >196:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+33E __absolute__ ABS >196:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+340 __absolute__ ABS >197:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+342 __absolute__ ABS >199:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+344 __absolute__ ABS >200:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+348 __absolute__ ABS >201:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+34A __absolute__ ABS >202:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+34C __absolute__ ABS >203:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+34E __absolute__ ABS >203:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+350 __absolute__ ABS >203:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+352 __absolute__ ABS >203:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+354 __absolute__ ABS >203:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+356 __absolute__ ABS >203:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+358 __absolute__ ABS >203:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+35A __absolute__ ABS >203:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+35C __absolute__ ABS >203:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+35E __absolute__ ABS >203:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+360 __absolute__ ABS >203:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+362 __absolute__ ABS >203:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+364 __absolute__ ABS >203:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+366 __absolute__ ABS >203:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+368 __absolute__ ABS >204:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+36A __absolute__ ABS >206:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+36C __absolute__ ABS >207:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+370 __absolute__ ABS >208:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+372 __absolute__ ABS >209:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+374 __absolute__ ABS >210:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+376 __absolute__ ABS >211:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+378 __absolute__ ABS >211:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+37A __absolute__ ABS >211:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+37C __absolute__ ABS >211:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+37E __absolute__ ABS >211:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+380 __absolute__ ABS >211:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+382 __absolute__ ABS >211:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+384 __absolute__ ABS >211:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+386 __absolute__ ABS >211:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+388 __absolute__ ABS >211:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+38A __absolute__ ABS >211:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+38C __absolute__ ABS >211:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+38E __absolute__ ABS >211:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+390 __absolute__ ABS >211:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+392 __absolute__ ABS >212:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+394 __absolute__ ABS >214:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+396 __absolute__ ABS >215:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+39A __absolute__ ABS >216:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+39C __absolute__ ABS >217:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+39E __absolute__ ABS >218:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3A0 __absolute__ ABS >218:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3A2 __absolute__ ABS >218:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3A4 __absolute__ ABS >218:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3A6 __absolute__ ABS >218:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3A8 __absolute__ ABS >218:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3AA __absolute__ ABS >218:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3AC __absolute__ ABS >218:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3AE __absolute__ ABS >218:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3B0 __absolute__ ABS >218:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3B2 __absolute__ ABS >218:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3B4 __absolute__ ABS >218:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3B6 __absolute__ ABS >218:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3B8 __absolute__ ABS >218:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3BA __absolute__ ABS >219:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3BC __absolute__ ABS >221:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3BE __absolute__ ABS >222:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3C2 __absolute__ ABS >223:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3C4 __absolute__ ABS >224:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3C6 __absolute__ ABS >225:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3C8 __absolute__ ABS >225:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3CA __absolute__ ABS >225:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3CC __absolute__ ABS >225:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3CE __absolute__ ABS >225:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3D0 __absolute__ ABS >225:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3D2 __absolute__ ABS >225:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3D4 __absolute__ ABS >225:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3D6 __absolute__ ABS >225:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3D8 __absolute__ ABS >225:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3DA __absolute__ ABS >225:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3DC __absolute__ ABS >225:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3DE __absolute__ ABS >225:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3E0 __absolute__ ABS >225:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3E2 __absolute__ ABS >226:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3E4 __absolute__ ABS >228:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3E6 __absolute__ ABS >229:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3EA __absolute__ ABS >230:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3EC __absolute__ ABS >231:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3EE __absolute__ ABS >231:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3F0 __absolute__ ABS >231:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3F2 __absolute__ ABS >231:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3F4 __absolute__ ABS >231:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3F6 __absolute__ ABS >231:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3F8 __absolute__ ABS >231:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3FA __absolute__ ABS >231:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3FC __absolute__ ABS >231:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+3FE __absolute__ ABS >231:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+400 __absolute__ ABS >231:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+402 __absolute__ ABS >231:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+404 __absolute__ ABS >231:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+406 __absolute__ ABS >231:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+408 __absolute__ ABS >232:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+40A __absolute__ ABS >234:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+40C __absolute__ ABS >235:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+410 __absolute__ ABS >236:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+412 __absolute__ ABS >237:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+414 __absolute__ ABS >238:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+416 __absolute__ ABS >239:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+418 __absolute__ ABS >239:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+41A __absolute__ ABS >239:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+41C __absolute__ ABS >239:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+41E __absolute__ ABS >239:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+420 __absolute__ ABS >239:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+422 __absolute__ ABS >239:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+424 __absolute__ ABS >239:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+426 __absolute__ ABS >239:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+428 __absolute__ ABS >239:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+42A __absolute__ ABS >239:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+42C __absolute__ ABS >239:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+42E __absolute__ ABS >239:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+430 __absolute__ ABS >239:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+432 __absolute__ ABS >240:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+434 __absolute__ ABS >242:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+436 __absolute__ ABS >243:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+43A __absolute__ ABS >244:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+43C __absolute__ ABS >245:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+43E __absolute__ ABS >246:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+440 __absolute__ ABS >246:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+442 __absolute__ ABS >246:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+444 __absolute__ ABS >246:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+446 __absolute__ ABS >246:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+448 __absolute__ ABS >246:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+44A __absolute__ ABS >246:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+44C __absolute__ ABS >246:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+44E __absolute__ ABS >246:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+450 __absolute__ ABS >246:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+452 __absolute__ ABS >246:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+454 __absolute__ ABS >246:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+456 __absolute__ ABS >246:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+458 __absolute__ ABS >246:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+45A __absolute__ ABS >247:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+45C __absolute__ ABS >249:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+45E __absolute__ ABS >250:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+462 __absolute__ ABS >251:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+464 __absolute__ ABS >252:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+466 __absolute__ ABS >253:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+468 __absolute__ ABS >253:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+46A __absolute__ ABS >253:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+46C __absolute__ ABS >253:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+46E __absolute__ ABS >253:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+470 __absolute__ ABS >253:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+472 __absolute__ ABS >253:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+474 __absolute__ ABS >253:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+476 __absolute__ ABS >253:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+478 __absolute__ ABS >253:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+47A __absolute__ ABS >253:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+47C __absolute__ ABS >253:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+47E __absolute__ ABS >253:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+480 __absolute__ ABS >253:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+482 __absolute__ ABS >254:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+484 __absolute__ ABS >256:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+486 __absolute__ ABS >257:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+48A __absolute__ ABS >258:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+48C __absolute__ ABS >259:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+48E __absolute__ ABS >259:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+490 __absolute__ ABS >259:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+492 __absolute__ ABS >259:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+494 __absolute__ ABS >259:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+496 __absolute__ ABS >259:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+498 __absolute__ ABS >259:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+49A __absolute__ ABS >259:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+49C __absolute__ ABS >259:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+49E __absolute__ ABS >259:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4A0 __absolute__ ABS >259:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4A2 __absolute__ ABS >259:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4A4 __absolute__ ABS >259:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4A6 __absolute__ ABS >259:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4A8 __absolute__ ABS >260:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4AA __absolute__ ABS >262:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4AC __absolute__ ABS >263:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4B0 __absolute__ ABS >264:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4B2 __absolute__ ABS >265:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4B4 __absolute__ ABS >266:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4B6 __absolute__ ABS >266:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4B8 __absolute__ ABS >266:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4BA __absolute__ ABS >266:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4BC __absolute__ ABS >266:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4BE __absolute__ ABS >266:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4C0 __absolute__ ABS >266:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4C2 __absolute__ ABS >266:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4C4 __absolute__ ABS >266:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4C6 __absolute__ ABS >266:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4C8 __absolute__ ABS >266:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4CA __absolute__ ABS >266:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4CC __absolute__ ABS >266:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4CE __absolute__ ABS >266:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4D0 __absolute__ ABS >267:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4D2 __absolute__ ABS >269:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4D4 __absolute__ ABS >270:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4D8 __absolute__ ABS >271:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4DA __absolute__ ABS >272:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4DC __absolute__ ABS >272:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4DE __absolute__ ABS >272:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4E0 __absolute__ ABS >272:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4E2 __absolute__ ABS >272:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4E4 __absolute__ ABS >272:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4E6 __absolute__ ABS >272:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4E8 __absolute__ ABS >272:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4EA __absolute__ ABS >272:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4EC __absolute__ ABS >272:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4EE __absolute__ ABS >272:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4F0 __absolute__ ABS >272:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4F2 __absolute__ ABS >272:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4F4 __absolute__ ABS >272:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4F6 __absolute__ ABS >273:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4F8 __absolute__ ABS >275:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4FA __absolute__ ABS >276:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+4FE __absolute__ ABS >277:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+500 __absolute__ ABS >278:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+502 __absolute__ ABS >278:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+504 __absolute__ ABS >278:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+506 __absolute__ ABS >278:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+508 __absolute__ ABS >278:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+50A __absolute__ ABS >278:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+50C __absolute__ ABS >278:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+50E __absolute__ ABS >278:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+510 __absolute__ ABS >278:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+512 __absolute__ ABS >278:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+514 __absolute__ ABS >278:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+516 __absolute__ ABS >278:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+518 __absolute__ ABS >278:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+51A __absolute__ ABS >278:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+51C __absolute__ ABS >279:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+51E __absolute__ ABS >282:/Users/jkaiwang/MPLABXProjects/lab07.X/basic.asm
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__Hspace_0 522 0 ABS 0 - -
+__Hspace_4 60000F 0 ABS 0 - -
+__L__absolute__ 0 0 ABS 0 __absolute__ -
+isa$xinst 0 0 ABS 0 - build/default/debug/basic.o
+__Hconfig 30000E 0 CONFIG 4 config -
+__Lconfig 0 0 CONFIG 4 config -
+isa$std 1 0 ABS 0 - build/default/debug/basic.o
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+__H__absolute__ 522 0 ABS 0 __absolute__ -
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
