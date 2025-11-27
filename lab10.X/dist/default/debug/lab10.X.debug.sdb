@@ -1,0 +1,427 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4520 ]
+[d frameptr 4065 ]
+"4 /Applications/microchip/xc8/v2.45/pic/sources/c99/common/fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 /Applications/microchip/xc8/v2.45/pic/sources/c99/common/float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 /Applications/microchip/xc8/v2.45/pic/sources/c99/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 /Applications/microchip/xc8/v2.45/pic/sources/c99/common/ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 /Applications/microchip/xc8/v2.45/pic/sources/c99/common/ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 /Applications/microchip/xc8/v2.45/pic/sources/c99/common/ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"7 /Applications/microchip/xc8/v2.45/pic/sources/c99/common/lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"7 /Applications/microchip/xc8/v2.45/pic/sources/c99/common/lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"10 /Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 /Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 /Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 /Applications/microchip/xc8/v2.45/pic/sources/c99/common/Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 /Applications/microchip/xc8/v2.45/pic/sources/c99/common/Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"11 /Users/jkaiwang/MPLABXProjects/lab10.X/hard.c
+[v _UART_putc UART_putc `T(v  1 s 1 UART_putc ]
+"15
+[v _UART_print_dec UART_print_dec `(uc  1 e 1 0 ]
+"34
+[v _UART_update_adc UART_update_adc `(v  1 e 1 0 ]
+"49
+[v _LED_update LED_update `(v  1 e 1 0 ]
+"56
+[v _ADC_read_AN0 ADC_read_AN0 `(ui  1 e 2 0 ]
+"63
+[v _map_adc_to_output map_adc_to_output `(uc  1 e 1 0 ]
+"78
+[v _ADC_init ADC_init `(v  1 e 1 0 ]
+"91
+[v _main main `(v  1 e 1 0 ]
+"4 test_uart.c
+[v _test_uart_init test_uart_init `(v  1 e 1 0 ]
+"35
+[v _test_uart_write test_uart_write `(v  1 e 1 0 ]
+"1311 /Users/jkaiwang/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.7.171/xc8/pic/include/proc/pic18f4520.h
+[v _LATD LATD `VEuc  1 e 1 @3980 ]
+[s S29 . 1 `uc 1 LATD0 1 0 :1:0 
+`uc 1 LATD1 1 0 :1:1 
+`uc 1 LATD2 1 0 :1:2 
+`uc 1 LATD3 1 0 :1:3 
+`uc 1 LATD4 1 0 :1:4 
+`uc 1 LATD5 1 0 :1:5 
+`uc 1 LATD6 1 0 :1:6 
+`uc 1 LATD7 1 0 :1:7 
+]
+"1338
+[s S38 . 1 `uc 1 LD0 1 0 :1:0 
+`uc 1 LD1 1 0 :1:1 
+`uc 1 LD2 1 0 :1:2 
+`uc 1 LD3 1 0 :1:3 
+`uc 1 LD4 1 0 :1:4 
+`uc 1 LD5 1 0 :1:5 
+`uc 1 LD6 1 0 :1:6 
+`uc 1 LD7 1 0 :1:7 
+]
+[u S47 . 1 `S29 1 . 1 0 `S38 1 . 1 0 ]
+[v _LATDbits LATDbits `VES47  1 e 1 @3980 ]
+[s S145 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+`uc 1 TRISA7 1 0 :1:7 
+]
+"1507
+[s S154 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+`uc 1 RA7 1 0 :1:7 
+]
+[u S163 . 1 `S145 1 . 1 0 `S154 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES163  1 e 1 @3986 ]
+"2141
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+[s S186 . 1 `uc 1 ADCS 1 0 :3:0 
+`uc 1 ACQT 1 0 :3:3 
+`uc 1 . 1 0 :1:6 
+`uc 1 ADFM 1 0 :1:7 
+]
+"4638
+[s S191 . 1 `uc 1 ADCS0 1 0 :1:0 
+`uc 1 ADCS1 1 0 :1:1 
+`uc 1 ADCS2 1 0 :1:2 
+`uc 1 ACQT0 1 0 :1:3 
+`uc 1 ACQT1 1 0 :1:4 
+`uc 1 ACQT2 1 0 :1:5 
+]
+[u S198 . 1 `S186 1 . 1 0 `S191 1 . 1 0 ]
+[v _ADCON2bits ADCON2bits `VES198  1 e 1 @4032 ]
+"4688
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+[s S69 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_NOT_DONE 1 0 :1:1 
+]
+"4817
+[s S72 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :4:2 
+]
+[s S76 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+]
+[s S83 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 DONE 1 0 :1:1 
+]
+[s S86 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_DONE 1 0 :1:1 
+]
+[s S89 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[s S92 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_DONE 1 0 :1:1 
+]
+[s S95 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GODONE 1 0 :1:1 
+]
+[u S98 . 1 `S69 1 . 1 0 `S72 1 . 1 0 `S76 1 . 1 0 `S83 1 . 1 0 `S86 1 . 1 0 `S89 1 . 1 0 `S92 1 . 1 0 `S95 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES98  1 e 1 @4034 ]
+"4899
+[v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
+"4906
+[v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
+[s S214 . 1 `uc 1 SCS 1 0 :2:0 
+`uc 1 IOFS 1 0 :1:2 
+`uc 1 OSTS 1 0 :1:3 
+`uc 1 IRCF 1 0 :3:4 
+`uc 1 IDLEN 1 0 :1:7 
+]
+"6106
+[s S220 . 1 `uc 1 SCS0 1 0 :1:0 
+`uc 1 SCS1 1 0 :1:1 
+`uc 1 FLTS 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 IRCF0 1 0 :1:4 
+`uc 1 IRCF1 1 0 :1:5 
+`uc 1 IRCF2 1 0 :1:6 
+]
+[u S228 . 1 `S214 1 . 1 0 `S220 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES228  1 e 1 @4051 ]
+[s S323 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1954 C:\Program Files\Microchip\xc8\v2.30\pic\include\proc\pic18f4520.h
+[s S332 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+[u S341 . 1 `S323 1 . 1 0 `S332 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES341  1 e 1 @3988 ]
+[s S546 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 PSPIE 1 0 :1:7 
+]
+"2617
+[s S555 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TX1IE 1 0 :1:4 
+`uc 1 RC1IE 1 0 :1:5 
+]
+[u S559 . 1 `S546 1 . 1 0 `S555 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES559  1 e 1 @3997 ]
+[s S516 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 PSPIF 1 0 :1:7 
+]
+"2694
+[s S525 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TX1IF 1 0 :1:4 
+`uc 1 RC1IF 1 0 :1:5 
+]
+[u S529 . 1 `S516 1 . 1 0 `S525 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES529  1 e 1 @3998 ]
+[s S576 . 1 `uc 1 TMR1IP 1 0 :1:0 
+`uc 1 TMR2IP 1 0 :1:1 
+`uc 1 CCP1IP 1 0 :1:2 
+`uc 1 SSPIP 1 0 :1:3 
+`uc 1 TXIP 1 0 :1:4 
+`uc 1 RCIP 1 0 :1:5 
+`uc 1 ADIP 1 0 :1:6 
+`uc 1 PSPIP 1 0 :1:7 
+]
+"2771
+[s S585 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TX1IP 1 0 :1:4 
+`uc 1 RC1IP 1 0 :1:5 
+]
+[u S589 . 1 `S576 1 . 1 0 `S585 1 . 1 0 ]
+[v _IPR1bits IPR1bits `VES589  1 e 1 @3999 ]
+[s S462 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"3152
+[s S471 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 ADEN 1 0 :1:3 
+]
+[s S474 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 SRENA 1 0 :1:5 
+]
+[s S477 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[s S480 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S483 . 1 `uc 1 RCD8 1 0 :1:0 
+]
+[u S485 . 1 `S462 1 . 1 0 `S471 1 . 1 0 `S474 1 . 1 0 `S477 1 . 1 0 `S480 1 . 1 0 `S483 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES485  1 e 1 @4011 ]
+[s S363 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"3360
+[s S372 . 1 `uc 1 TX9D1 1 0 :1:0 
+`uc 1 TRMT1 1 0 :1:1 
+`uc 1 BRGH1 1 0 :1:2 
+`uc 1 SENDB1 1 0 :1:3 
+`uc 1 SYNC1 1 0 :1:4 
+`uc 1 TXEN1 1 0 :1:5 
+`uc 1 TX91 1 0 :1:6 
+`uc 1 CSRC1 1 0 :1:7 
+]
+[s S381 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[s S384 . 1 `uc 1 TXD8 1 0 :1:0 
+]
+[u S386 . 1 `S363 1 . 1 0 `S372 1 . 1 0 `S381 1 . 1 0 `S384 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES386  1 e 1 @4012 ]
+"3577
+[v _TXREG TXREG `VEuc  1 e 1 @4013 ]
+"3589
+[v _RCREG RCREG `VEuc  1 e 1 @4014 ]
+"3601
+[v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
+[s S415 . 1 `uc 1 ABDEN 1 0 :1:0 
+`uc 1 WUE 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 BRG16 1 0 :1:3 
+`uc 1 TXCKP 1 0 :1:4 
+`uc 1 RXDTP 1 0 :1:5 
+`uc 1 RCIDL 1 0 :1:6 
+`uc 1 ABDOVF 1 0 :1:7 
+]
+"4258
+[s S424 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 SCKP 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 RCMT 1 0 :1:6 
+]
+[s S429 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 RXCKP 1 0 :1:5 
+]
+[s S432 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 W4E 1 0 :1:1 
+]
+[u S435 . 1 `S415 1 . 1 0 `S424 1 . 1 0 `S429 1 . 1 0 `S432 1 . 1 0 ]
+[v _BAUDCONbits BAUDCONbits `VES435  1 e 1 @4024 ]
+"7550
+[v _IRCF0 IRCF0 `VEb  1 e 0 @32412 ]
+"7553
+[v _IRCF1 IRCF1 `VEb  1 e 0 @32413 ]
+"7556
+[v _IRCF2 IRCF2 `VEb  1 e 0 @32414 ]
+"7 /Users/jkaiwang/MPLABXProjects/lab10.X/hard.c
+[v _current_out current_out `VEuc  1 e 1 0 ]
+"8
+[v _prev_out prev_out `VEuc  1 e 1 0 ]
+"9
+[v _prev_len prev_len `uc  1 s 1 prev_len ]
+"91
+[v _main main `(v  1 e 1 0 ]
+{
+"101
+[v main@adc_val adc_val `ui  1 a 2 21 ]
+"121
+} 0
+"4 test_uart.c
+[v _test_uart_init test_uart_init `(v  1 e 1 0 ]
+{
+"33
+} 0
+"63 /Users/jkaiwang/MPLABXProjects/lab10.X/hard.c
+[v _map_adc_to_output map_adc_to_output `(uc  1 e 1 0 ]
+{
+[v map_adc_to_output@adc adc `ui  1 p 2 0 ]
+"76
+} 0
+"34
+[v _UART_update_adc UART_update_adc `(v  1 e 1 0 ]
+{
+"35
+[v UART_update_adc@i i `uc  1 a 1 19 ]
+"34
+[v UART_update_adc@adc_value adc_value `ui  1 p 2 17 ]
+"47
+} 0
+"15
+[v _UART_print_dec UART_print_dec `(uc  1 e 1 0 ]
+{
+"28
+[v UART_print_dec@i_264 i `i  1 a 2 14 ]
+"16
+[v UART_print_dec@buf buf `[5]uc  1 a 5 9 ]
+"17
+[v UART_print_dec@len len `uc  1 a 1 16 ]
+"15
+[v UART_print_dec@v v `ui  1 p 2 7 ]
+"32
+} 0
+"7 /Applications/microchip/xc8/v2.45/pic/sources/c99/common/lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwmod@counter counter `uc  1 a 1 4 ]
+"7
+[v ___lwmod@dividend dividend `ui  1 p 2 0 ]
+[v ___lwmod@divisor divisor `ui  1 p 2 2 ]
+"25
+} 0
+"7 /Applications/microchip/xc8/v2.45/pic/sources/c99/common/lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 4 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 6 ]
+"7
+[v ___lwdiv@dividend dividend `ui  1 p 2 0 ]
+[v ___lwdiv@divisor divisor `ui  1 p 2 2 ]
+"30
+} 0
+"11 /Users/jkaiwang/MPLABXProjects/lab10.X/hard.c
+[v _UART_putc UART_putc `T(v  1 s 1 UART_putc ]
+{
+[v UART_putc@c c `uc  1 a 1 wreg ]
+[v UART_putc@c c `uc  1 a 1 wreg ]
+[v UART_putc@c c `uc  1 a 1 1 ]
+"13
+} 0
+"35 test_uart.c
+[v _test_uart_write test_uart_write `(v  1 e 1 0 ]
+{
+[v test_uart_write@data data `uc  1 a 1 wreg ]
+[v test_uart_write@data data `uc  1 a 1 wreg ]
+[v test_uart_write@data data `uc  1 a 1 0 ]
+"40
+} 0
+"49 /Users/jkaiwang/MPLABXProjects/lab10.X/hard.c
+[v _LED_update LED_update `(v  1 e 1 0 ]
+{
+[v LED_update@val val `uc  1 a 1 wreg ]
+[v LED_update@val val `uc  1 a 1 wreg ]
+[v LED_update@val val `uc  1 a 1 1 ]
+"54
+} 0
+"56
+[v _ADC_read_AN0 ADC_read_AN0 `(ui  1 e 2 0 ]
+{
+"62
+} 0
+"78
+[v _ADC_init ADC_init `(v  1 e 1 0 ]
+{
+"89
+} 0
