@@ -1,4 +1,0 @@
-screen /dev/cu.usbserial-1110 1200
-ls /dev/cu.* /dev/tty.* 2>/dev/null
-
-ps aux | grep screen      
